@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+	<!--포스트 방식에서는 url에 '/'를 상항 붙여야 함.-->
+	<form action="/pages/user-create/" method="POST">
+	{% csrf_token %}
+		이름 : <input type="text" name="name"><br>
+		비밀번호 : <input type="password" name="pwd">
+		<input type="submit" value="가입!!!">
+	</form>
+{% endblock %}
